@@ -123,9 +123,9 @@ app.layout = html.Div([
 
 
         ]),
-        dcc.Tab(label='Facebook Stock Data', children=[
+        dcc.Tab(label='Stock Data', children=[
             html.Div([
-                html.H1("Facebook Stocks High vs Lows", 
+                html.H1("Stocks High vs Lows", 
                         style={'textAlign': 'center'}),
               
                 dcc.Dropdown(id='my-dropdown',
@@ -133,18 +133,18 @@ app.layout = html.Div([
                                       {'label': 'Apple','value': 'AAPL'}, 
                                       {'label': 'Facebook', 'value': 'FB'}, 
                                       {'label': 'Microsoft','value': 'MSFT'}], 
-                             multi=True,value=['FB'],
+                             multi=True,value=[],
                              style={"display": "block", "margin-left": "auto", 
                                     "margin-right": "auto", "width": "60%"}),
                 dcc.Graph(id='highlow'),
-                html.H1("Facebook Market Volume", style={'textAlign': 'center'}),
+                html.H1("Market Volume", style={'textAlign': 'center'}),
          
                 dcc.Dropdown(id='my-dropdown2',
                              options=[{'label': 'Tesla', 'value': 'TSLA'},
                                       {'label': 'Apple','value': 'AAPL'}, 
                                       {'label': 'Facebook', 'value': 'FB'},
                                       {'label': 'Microsoft','value': 'MSFT'}], 
-                             multi=True,value=['FB'],
+                             multi=True,value=[],
                              style={"display": "block", "margin-left": "auto", 
                                     "margin-right": "auto", "width": "60%"}),
                 dcc.Graph(id='volume')
